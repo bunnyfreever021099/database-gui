@@ -38,7 +38,7 @@ export const POST: RequestHandler = async ({ request }) => {
 
   } catch (error) {
     console.error('Query execution error:', error);
-    
+
     return json(
       {
         success: false,
@@ -52,9 +52,9 @@ export const POST: RequestHandler = async ({ request }) => {
 
 export const GET: RequestHandler = async () => {
   return json(
-    { 
-      success: false, 
-      error: 'GET method not allowed. Use POST to execute queries.' 
+    {
+      success: false,
+      error: 'GET method not allowed. Use POST to execute queries.'
     },
     { status: 405 }
   );
